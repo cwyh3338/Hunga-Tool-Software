@@ -1,0 +1,40 @@
+The following is a quick description of this 2017 climatology. This is an updated version of the 2012 
+McPeters and Labow climatology with 5 additional years of sonde and MLS data. 
+We have merged ozone profile data from 28 years (1988-2016) of ozonesonde measurements
+with data from Aura MLS (2004-2016) into monthly 10 degree latitude bands.
+
+
+OZONE DATA FILES:
+Two files now exist for the ozone climatology- one for ozone "hole" conditions and one for climatological profiles outside
+the polar vortex (defined by temperatures at 50 hPa). This was done to separate the two regimes for better satellite a-prioris.
+The files are identical from 70 South to 90 North and only differ from 90-70 South.
+
+climo.nohole.table
+ Contains the ozone mixing ratio table in units of PPMV (parts per million by volume) for conditions outside the polar vortex.
+
+climo.hole.table
+  Contains the ozone mixing ratio table in units of PPMV (parts per million by volume).  This is for ozone hole conditions
+in the Southern Hemisphere (70-90 South).  The rest of the planet (70 South to 90 North) is the same as climo.nohole.table.
+
+STATISTICS FILES:
+ Standard deviations (1 sigma) in PPMV are caluculated for each altitude, month and zone for each of the two regimes.
+
+ALTITUDE SCALE:
+The climatological tables are in altitude units of Z* (0-65 km).
+ (Z* is in units of km but is actually a pressure scale)
+
+Zstar is defined as:
+        Z* = 16 x log(1013/P)
+ where P is pressure in hPa
+    (and the log is base 10)
+
+For a more detailed discussion of the methodology used in this climatology, please see:
+McPeters, R.D. and G. J. Labow, Climatology 2011: an MLS and sonde derived ozone climatology for 
+satellite retrieval algorithms, JOURNAL OF GEOPHYSICAL RESEARCH, doi:10.1029/2011JD017006, May 2012
+
+LONGITUDINAL TROPICAL VARIATION (wave 1)
+tropics.longitude.table
+This file contains a monthly climatology of tropical ozone as a function of longitude for 25 South to 25 North.  The data 
+comes from the ozone sonde stations normalized to the OMI-MLS tropospheric residual. It covers the altitude range of 
+0-19km in five degree longitude increments.
+

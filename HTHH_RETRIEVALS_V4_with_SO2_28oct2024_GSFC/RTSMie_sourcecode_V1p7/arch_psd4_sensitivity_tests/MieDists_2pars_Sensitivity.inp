@@ -1,0 +1,12 @@
+312.0
+1.47
+0.0001
+0.34
+1.38
+      OPEN(1,file='MieDists_2pars_Sensitivity.inp', STATUS = 'old')
+      read(1,*)AOD_refw          ! Reference wavelength [nm]. 
+      read(1,*)nreal_firstguess  ! 
+      read(1,*)nimag_firstguess  ! 
+      read(1,*)Reff_firstguess  ! 
+      read(1,*)Veff_firstguess  ! 
+      close(1)

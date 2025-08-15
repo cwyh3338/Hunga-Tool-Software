@@ -1,0 +1,6 @@
+  FATAL: VLIDORT execution failure 
+   -----Here is the message and traces : 
+ Message : Singular matrix, u(i,i)=0, for i = 164
+ Trace 1 : DGBTRF call (nlayers>1) in BVP_MATRIX_LUD
+ Trace 2 : Error from BVP_MATRIXSETUP_MASTER, Called in VLIDORT_FOURIER, Fourier #  0
+ Trace 3 : Called by VLIDORT_MASTER 

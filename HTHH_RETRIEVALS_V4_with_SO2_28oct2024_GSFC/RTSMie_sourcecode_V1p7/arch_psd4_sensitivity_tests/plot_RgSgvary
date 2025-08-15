@@ -1,0 +1,40 @@
+set multiplot
+
+unset label 1; unset xlabel ; unset ylabel
+
+#  first plot
+
+x1 = 0.01 ; x2 = 1.5 ; x3 = 0.1
+y1 = 0.0 ; y2 = 8.0 ; y3 = abs(y2-y1)/8.0
+set xrange[x1:x2] ; set xtics x3
+set yrange[y1:y2] ; set ytics y3
+set ylabel 'Log-normal distributions'
+set label 1 'Sg = 1.38, Log-normal distributions' at 0.3,7.5
+set size 0.95,0.9 ;set origin 0.0,0.0
+plot 'Mie_Rg_Distributions.dat' using 2:3 t 'Rg = 0.20' w l lt -1 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:4 t 'Rg = 0.23' w l lt 1 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:5 t 'Rg = 0.25' w l lt 2 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:6 t 'Rg = 0.27' w l lt 3 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:7 t 'Rg = 0.30' w l lt 4 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:9 t  'Rg = 0.32' w l lt 5 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:12 t 'Rg = 0.35' w l lt 6 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:13 t 'Rg = 0.37' w l lt 7 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:14 t 'Rg = 0.40' w l lt -1 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:15 t 'Rg = 0.43' w l lt 0 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:16 t 'Rg = 0.45' w l lt 1 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:17 t 'Rg = 0.47' w l lt 2 lw 2,\
+     'Mie_Rg_Distributions.dat' using 2:18 t 'Rg = 0.50' w l lt 3 lw 2
+
+#
+#x1 = 0.01; x2 = 1.5 ; x3 = 0.1
+#y1 = 0.0 ; y2 = 8.0 ; y3 = abs(y2-y1)/8.0
+#set xrange[x1:x2] ; set xtics x3
+#set yrange[y1:y2] ; set ytics y3
+#set ylabel 'Log-normal distributions'
+#set xlabel 'particle size (Microns)'
+#set label 1 'Rg = 0.34, Log-normal distributions' at 0.3,7.5
+#set size 0.95,0.5 ;set origin 0.0,0.0
+#plot 'Mie_Sg_Distributions.dat' using 2:3 t 'Sg = 1.20' w l lt -1 lw 2,\
+
+unset multiplot
+

@@ -1,0 +1,20 @@
+
+For some important Tonga retrieval code tasks, do the following
+  (using ">" as the command line prompt and the gfortran compiler as an example):
+
+To compile & run the Tonga code:
+* For serial version -
+  > HTHH_run.bash gfortran
+* For OpenMP version -
+  > HTHH_run_OMP.bash gfortran
+
+To clean the current compile:
+* For serial version -
+  > make clean
+* For OpenMP version -
+  > make clean COMPILE_OMP=t
+
+
+*******************************************************************************
+*******************************************************************************
+

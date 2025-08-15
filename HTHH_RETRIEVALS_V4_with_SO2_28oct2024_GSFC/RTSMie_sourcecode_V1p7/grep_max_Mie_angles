@@ -1,0 +1,116 @@
+RTSMie_Inputs_Def.f90:3:   use RTSMie_parameters_m, only : dp, max_Mie_angles
+RTSMie_Inputs_Def.f90:103:   REAL    (KIND=dp) :: Fmatrix_angles(max_Mie_angles)
+RTSMie_IO_Readwrite.f90:26:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:103:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:199:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:288:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:470:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:495:   REAL    (KIND=dp), intent(in) :: Fmatrix_angles(max_Mie_angles)
+RTSMie_IO_Readwrite.f90:584:   use RTSMie_parameters_m, ONLY : dp, max_Mie_angles
+RTSMie_IO_Readwrite.f90:612:   REAL    (KIND=dp), intent(in) :: Fmatrix_angles(max_Mie_angles)
+RTSMie_Lin_Outputs_Def.f90:3:   use RTSMie_parameters_m, only : dp, max_Mie_angles
+RTSMie_Lin_Outputs_Def.f90:39:   real(KIND=dp) :: LPSD_Mie_expcoeffs (6,0:max_Mie_angles,3)
+RTSMie_Lin_Outputs_Def.f90:44:   real(KIND=dp) :: LRFE_Mie_expcoeffs (6,0:max_Mie_angles,2)
+RTSMie_Lin_Outputs_Def.f90:49:   real(KIND=dp) :: LFRC_Mie_expcoeffs (6,0:max_Mie_angles)
+RTSMie_Lin_Outputs_Def.f90:57:   real(KIND=dp) :: LPSD_Mie_Fmatrix(4,max_Mie_angles,3)
+RTSMie_Lin_Outputs_Def.f90:58:   real(KIND=dp) :: LRFE_Mie_Fmatrix(4,max_Mie_angles,2)
+RTSMie_Lin_Outputs_Def.f90:59:   real(KIND=dp) :: LFRC_Mie_Fmatrix(4,max_Mie_angles)
+RTSMie_Master.f90:136:   REAL    (KIND=dp) :: coeff_cosines(max_Mie_angles)
+RTSMie_Master.f90:137:   REAL    (KIND=dp) :: coeff_weights(max_Mie_angles)
+RTSMie_Master.f90:142:   COMPLEX (KIND=dp), DIMENSION (max_Mie_angles, max_Mie_sizes)  :: splus,sminus
+RTSMie_Master.f90:146:   REAL (KIND=dp), DIMENSION (4,max_Mie_angles)  :: Local_Fmatrix
+RTSMie_Master.f90:162:   REAL    (KIND=dp)  :: angle_cosines(max_Mie_angles)
+RTSMie_Master.f90:163:   REAL    (KIND=dp)  :: Fmatrix_cosines(max_Mie_angles)
+RTSMie_Master.f90:394:      if ( n_coeffct_angles > max_Mie_angles ) then
+RTSMie_Master.f90:399:         action  = 'Action  : Increase value of max_Mie_angles in calling program to at least '//char5
+RTSMie_Master.f90:411:      CALL mie_gauleg ( max_Mie_angles, n_coeffct_angles, -1.0_dp, 1.0_dp, & ! Input
+RTSMie_Master.f90:464:       ( max_Mie_angles, max_Mie_sizes, max_Mie_points,          & ! Dimensioning
+RTSMie_Master.f90:559:            ( max_Mie_angles, max_Mie_sizes, max_Mie_points, & ! Dimensioning
+RTSMie_Master.f90:698:         ( max_Mie_angles, n_coeffct_angles, n_coeffct_angles,          & ! I
+RTSMie_Master.f90:709:           ( max_Mie_angles, n_coeffct_angles, n_Fmatrix_angles,        & ! I
+RTSMie_Master.f90:725:       ( max_Mie_angles, max_Mie_sizes, max_Mie_points,          & ! Dimensioning
+RTSMie_Master.f90:767:  INTEGER, INTENT (IN) :: max_Mie_angles, max_Mie_sizes      !  Fixed
+RTSMie_Master.f90:777:  REAL    (KIND=dp), DIMENSION (max_Mie_angles), INTENT (IN) :: angle_cosines
+RTSMie_Master.f90:782:  COMPLEX (KIND=dp), DIMENSION (max_Mie_angles, max_Mie_sizes), INTENT (OUT) :: splus, sminus
+RTSMie_Master.f90:808:  REAL    (KIND=dp), DIMENSION (max_Mie_angles)     :: pi_n, pi_nm1
+RTSMie_Master.f90:813:!  REAL  (KIND=dp), DIMENSION (max_Mie_angles,max_Mie_points) :: polyplus, polyminus
+RTSMie_Master.f90:820:  ALLOCATE (polyplus (max_Mie_angles,max_Mie_points))
+RTSMie_Master.f90:821:  ALLOCATE (polyminus(max_Mie_angles,max_Mie_points))
+RTSMie_Master.f90:1039:SUBROUTINE develop ( max_Mie_angles, ncoeffs, nangles, &
+RTSMie_Master.f90:1060:  INTEGER          , INTENT (IN) :: max_Mie_angles
+RTSMie_Master.f90:1063:  REAL    (KIND=dp), INTENT (IN) :: cosines(max_Mie_angles)
+RTSMie_Master.f90:1064:  REAL    (KIND=dp), INTENT (IN) :: weights(max_Mie_angles)
+RTSMie_Master.f90:1065:  REAL    (KIND=dp), INTENT (IN) :: FMAT(4,max_Mie_angles)
+RTSMie_Master.f90:1069:  REAL    (KIND=dp), INTENT (INOUT) :: expcoeffs(6,0:max_Mie_angles)
+RTSMie_Master.f90:1073:  REAL    (KIND=dp) :: P00(max_Mie_angles,2)
+RTSMie_Master.f90:1074:  REAL    (KIND=dp) :: P02(max_Mie_angles,2)
+RTSMie_Master.f90:1075:  REAL    (KIND=dp) :: P22(max_Mie_angles,2)
+RTSMie_Master.f90:1076:  REAL    (KIND=dp) :: P2m2(max_Mie_angles,2)
+RTSMie_Master.f90:1077:  REAL    (KIND=dp) :: fmatw(4,max_Mie_angles)
+RTSMie_Master.f90:1218:SUBROUTINE expand ( max_Mie_angles, ncoeffs, nangles, cosines, expcoeffs, FMAT )
+RTSMie_Master.f90:1235:  INTEGER          , INTENT (IN) :: max_Mie_angles
+RTSMie_Master.f90:1237:  REAL    (KIND=dp), INTENT (IN) :: cosines(max_Mie_angles)
+RTSMie_Master.f90:1238:  REAL    (KIND=dp), INTENT (IN) :: expcoeffs(6,0:max_Mie_angles)
+RTSMie_Master.f90:1242:  REAL    (KIND=dp), INTENT (INOUT) :: FMAT(4,max_Mie_angles)
+RTSMie_Master.f90:1246:  REAL    (KIND=dp) :: P00(max_Mie_angles,2)
+RTSMie_Master.f90:1247:  REAL    (KIND=dp) :: P02(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:147:   REAL    (KIND=dp) :: coeff_cosines(max_Mie_angles)
+RTSMie_Master_PLUS.f90:148:   REAL    (KIND=dp) :: coeff_weights(max_Mie_angles)
+RTSMie_Master_PLUS.f90:153:   COMPLEX (KIND=dp), DIMENSION (max_Mie_angles, max_Mie_sizes)  :: splus,sminus
+RTSMie_Master_PLUS.f90:156:   COMPLEX (KIND=dp), DIMENSION (max_Mie_angles,max_Mie_sizes,2) :: dsplus, dsminus
+RTSMie_Master_PLUS.f90:160:   REAL (KIND=dp), DIMENSION (4,max_Mie_angles)    :: Local_Fmatrix
+RTSMie_Master_PLUS.f90:161:   REAL (KIND=dp), DIMENSION (4,max_Mie_angles,3)  :: Local_Fmatrix_kd
+RTSMie_Master_PLUS.f90:162:   REAL (KIND=dp), DIMENSION (4,max_Mie_angles,2)  :: Local_Fmatrix_rd
+RTSMie_Master_PLUS.f90:185:   REAL    (KIND=dp)  :: angle_cosines(max_Mie_angles)
+RTSMie_Master_PLUS.f90:186:   REAL    (KIND=dp)  :: Fmatrix_cosines(max_Mie_angles)
+RTSMie_Master_PLUS.f90:432:      if ( n_coeffct_angles > max_Mie_angles ) then
+RTSMie_Master_PLUS.f90:437:         action  = 'Action  : Increase value of max_Mie_angles in calling program to at least '//char5
+RTSMie_Master_PLUS.f90:449:      CALL mie_gauleg ( max_Mie_angles, n_coeffct_angles, -1.0_dp, 1.0_dp, & ! Input
+RTSMie_Master_PLUS.f90:502:       ( max_Mie_angles, max_Mie_sizes, max_Mie_points,          & ! Dimensioning
+RTSMie_Master_PLUS.f90:654:       ( max_Mie_angles, max_Mie_sizes, max_Mie_points,          & ! Dimensioning
+RTSMie_Master_PLUS.f90:944:      CALL develop_d ( do_LinearRef, do_LinearPSD, max_Mie_angles, nkderivs,              & ! I
+RTSMie_Master_PLUS.f90:957:              ( do_LinearRef, do_LinearPSD, max_Mie_angles, nkderivs,      & ! I
+RTSMie_Master_PLUS.f90:981:       ( max_Mie_angles, max_Mie_sizes, max_Mie_points,          & ! Dimensioning
+RTSMie_Master_PLUS.f90:1032:  INTEGER, INTENT (IN) :: max_Mie_angles, max_Mie_sizes      !  Fixed
+RTSMie_Master_PLUS.f90:1042:  REAL    (KIND=dp), DIMENSION (max_Mie_angles), INTENT (IN) :: angle_cosines
+RTSMie_Master_PLUS.f90:1047:  COMPLEX (KIND=dp), DIMENSION (max_Mie_angles, max_Mie_sizes), INTENT (OUT) :: splus, sminus
+RTSMie_Master_PLUS.f90:1052:  COMPLEX (KIND=dp), DIMENSION (max_Mie_angles,max_Mie_sizes,2), INTENT (OUT) :: dsplus, dsminus
+RTSMie_Master_PLUS.f90:1084:  REAL    (KIND=dp), DIMENSION (max_Mie_angles)     :: pi_n, pi_nm1
+RTSMie_Master_PLUS.f90:1089:!  REAL  (KIND=dp), DIMENSION (max_Mie_angles,max_Mie_points) :: polyplus, polyminus
+RTSMie_Master_PLUS.f90:1096:  ALLOCATE (polyplus (max_Mie_angles,max_Mie_points))
+RTSMie_Master_PLUS.f90:1097:  ALLOCATE (polyminus(max_Mie_angles,max_Mie_points))
+RTSMie_Master_PLUS.f90:1399:SUBROUTINE develop_d ( do_LinearRef, do_LinearPSD, max_Mie_angles, nkderivs,             & ! I
+RTSMie_Master_PLUS.f90:1422:  INTEGER          , INTENT (IN) :: max_Mie_angles
+RTSMie_Master_PLUS.f90:1426:  REAL    (KIND=dp), INTENT (IN) :: cosines(max_Mie_angles)
+RTSMie_Master_PLUS.f90:1427:  REAL    (KIND=dp), INTENT (IN) :: weights(max_Mie_angles)
+RTSMie_Master_PLUS.f90:1428:  REAL    (KIND=dp), INTENT (IN) :: FMAT(4,max_Mie_angles)
+RTSMie_Master_PLUS.f90:1429:  REAL    (KIND=dp), INTENT (IN) :: FMAT_RD(4,max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1430:  REAL    (KIND=dp), INTENT (IN) :: FMAT_KD(4,max_Mie_angles,3)
+RTSMie_Master_PLUS.f90:1434:  REAL    (KIND=dp), INTENT (INOUT) :: expcoeffs(6,0:max_Mie_angles)
+RTSMie_Master_PLUS.f90:1435:  REAL    (KIND=dp), INTENT (INOUT) :: expcoeffs_rd(6,0:max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1436:  REAL    (KIND=dp), INTENT (INOUT) :: expcoeffs_kd(6,0:max_Mie_angles,3)
+RTSMie_Master_PLUS.f90:1440:  REAL    (KIND=dp) :: P00(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1441:  REAL    (KIND=dp) :: P02(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1442:  REAL    (KIND=dp) :: P22(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1443:  REAL    (KIND=dp) :: P2m2(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1444:  REAL    (KIND=dp) :: fmatw(4,max_Mie_angles)
+RTSMie_Master_PLUS.f90:1445:  REAL    (KIND=dp) :: fmatwrd(4,max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1446:  REAL    (KIND=dp) :: fmatwkd(4,max_Mie_angles,3)
+RTSMie_Master_PLUS.f90:1641:SUBROUTINE expand_d  ( do_LinearRef, do_LinearPSD, max_Mie_angles, nkderivs,             & ! I
+RTSMie_Master_PLUS.f90:1661:  INTEGER          , INTENT (IN) :: max_Mie_angles
+RTSMie_Master_PLUS.f90:1665:  REAL    (KIND=dp), INTENT (IN) :: cosines(max_Mie_angles)
+RTSMie_Master_PLUS.f90:1667:  REAL    (KIND=dp), INTENT (IN) :: expcoeffs(6,0:max_Mie_angles)
+RTSMie_Master_PLUS.f90:1668:  REAL    (KIND=dp), INTENT (IN) :: expcoeffs_rd(6,0:max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1669:  REAL    (KIND=dp), INTENT (IN) :: expcoeffs_kd(6,0:max_Mie_angles,3)
+RTSMie_Master_PLUS.f90:1673:  REAL    (KIND=dp), INTENT (INOUT) :: FMAT(4,max_Mie_angles)
+RTSMie_Master_PLUS.f90:1674:  REAL    (KIND=dp), INTENT (INOUT) :: FMAT_RD(4,max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1675:  REAL    (KIND=dp), INTENT (INOUT) :: FMAT_KD(4,max_Mie_angles,3)
+RTSMie_Master_PLUS.f90:1679:  REAL    (KIND=dp) :: P00(max_Mie_angles,2)
+RTSMie_Master_PLUS.f90:1680:  REAL    (KIND=dp) :: P02(max_Mie_angles,2)
+RTSMie_Outputs_Def.f90:3:   use RTSMie_parameters_m, only : dp, max_Mie_angles
+RTSMie_Outputs_Def.f90:25:   real(KIND=dp) :: Mie_expcoeffs (6,0:max_Mie_angles)
+RTSMie_Outputs_Def.f90:30:   real(KIND=dp) :: Mie_Fmatrix(4,max_Mie_angles)
+RTSMie_Outputs_Def.f90:45:   real(KIND=dp) :: Mie_DistPlot (2,max_Mie_angles)
+RTSMie_Parameters.f90:15:!  INTEGER, PARAMETER :: max_Mie_angles     = 200
+RTSMie_Parameters.f90:24:  INTEGER, PARAMETER :: max_Mie_angles     = 4000
+RTSMie_Parameters.f90:25:!  INTEGER, PARAMETER :: max_Mie_angles     = 1000

@@ -1,0 +1,14 @@
+10/14/2022
+----------
+
+On watson3:
+* Had a problem when trying to run VLIDORT's "V2p8p3_solar_lpcs_OMP_tester.f90"
+    test after compiling the code with gfortran OPENMP=t OPT=t
+* Did NOT have a problem after compiling it with gfortran OPENMP=t (i.e. with
+    no OPT)
+
+
+*******************************************************************************
+*******************************************************************************
+
+

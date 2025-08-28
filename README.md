@@ -6,10 +6,10 @@ Repository: [https://github.com/cwyh3338/Hunga-Tool-Software](https://github.com
 ---
 
 ## Features
-- Supports 2-parameter retrieval (AOD, peak height) and 3-parameter retrieval (AOD, peak height, SO₂ column).
+- Supports 2-parameter retrieval (AOD, peak height) and 3-parameter retrieval (AOD, peak height, SO2 column).
 - Uses VLIDORT v2.8 radiative transfer model and Mie scattering calculations.
 - Input data include hyperspectral BUV radiance (e.g., TROPOMI, OMPS, OMI, TOMS) and atmospheric profiles (temperature, pressure, ozone).
-- Output includes retrieved AOD, plume height, SO₂ VCD, fitting diagnostics, and Jacobians.
+- Output includes retrieved AOD, plume height, SO2 VCD, fitting diagnostics, and Jacobians.
 
 ---
 

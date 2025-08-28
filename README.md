@@ -19,7 +19,7 @@ Repository: [https://github.com/cwyh3338/Hunga-Tool-Software](https://github.com
 
 ---
 
-## 📌 Note to Readers
+## 📌 Note to Readers (August 28, 2025)
 This retrieval tool is available here for you to look at and run if you wish.  
 However, please note that the code is still undergoing refinement as we work on the follow-on paper. Planned updates include:
 - a simple treatment for tropospheric clouds,

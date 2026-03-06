@@ -50,9 +50,15 @@ cd Hunga-Tool-Software/HTHH_RETRIEVALS_V4_with_SO2_28oct2024_GSFC
 ---
 
 ## Reference
-Spurr, R. J. D., et al. (2025): Solar Backscatter Ultraviolet (BUV) Retrievals of Mid-Stratospheric Aerosols from the 2022 Hunga Eruption, EGUsphere [preprint]. DOI: 10.5194/egusphere-2025-2938
+Spurr, R. J. D., Christi, M., Krotkov, N. A., Choi, W.-E., Carn, S., Li, C., Kramarova, N., Haffner, D., Yang, E.-S., Gorkavyi, N., Vasilkov, A., Wargan, K., Torres, O., Loyola, D., Di Pede, S., Pepijn Veefkind, J., Case, P., Schroeder, T., and Bhartia, P. K.: Solar Backscatter Ultraviolet (BUV) retrievals of mid-stratospheric aerosols from the 2022 Hunga Eruption, Atmos. Meas. Tech., 19, 993–1021, https://doi.org/10.5194/amt-19-993-2026, 2026.
 
 ---
+
+## Structure of the tool
+<img width="1635" height="867" alt="Screenshot 2026-03-06 at 2 40 14 PM" src="https://github.com/user-attachments/assets/227924a7-9b9a-461d-86f2-a31c8b24e1af" />
+
+---
+
 
 ## Contact
 Wonei Choi – won-ei.choi@nasa.gov

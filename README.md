@@ -54,12 +54,6 @@ Spurr, R. J. D., Christi, M., Krotkov, N. A., Choi, W.-E., Carn, S., Li, C., Kra
 
 ---
 
-## Structure of the tool
-<img width="1639" height="867" alt="final_structure_procs" src="https://github.com/user-attachments/assets/3338cd5d-f89e-47db-96de-151c430de4a6" />
-
----
-
-
 ## Contact
 Wonei Choi – won-ei.choi@nasa.gov
 

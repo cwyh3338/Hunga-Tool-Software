@@ -55,7 +55,7 @@ Spurr, R. J. D., Christi, M., Krotkov, N. A., Choi, W.-E., Carn, S., Li, C., Kra
 ---
 
 ## Structure of the tool
-<img width="1635" height="867" alt="Screenshot 2026-03-06 at 2 40 14 PM" src="https://github.com/user-attachments/assets/227924a7-9b9a-461d-86f2-a31c8b24e1af" />
+<img width="1639" height="867" alt="final_structure_procs" src="https://github.com/user-attachments/assets/3338cd5d-f89e-47db-96de-151c430de4a6" />
 
 ---
 
